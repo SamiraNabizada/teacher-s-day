@@ -1,0 +1,1232 @@
+/* =========================================
+   RESET
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Vazirmatn", sans-serif;
+    background: #FFF8F3;
+    color: #3F3A42;
+    overflow-x: hidden;
+}
+
+
+/* =========================================
+   COLORS
+========================================= */
+
+:root {
+
+    --background: #FFF8F3;
+    --white: #FFFFFF;
+
+    --text: #3F3A42;
+    --text-light: #756D75;
+
+    --border: #EDE3DE;
+
+    --pink: #E8A0BF;
+    --pink-dark: #C9789D;
+    --pink-light: #FCEEF4;
+
+    --green: #8FB9A8;
+    --green-dark: #5F927D;
+    --green-light: #E8F2EE;
+
+    --yellow: #F2C879;
+    --yellow-dark: #C79B43;
+    --yellow-light: #FFF5DC;
+
+    --purple: #B8A9D9;
+    --purple-dark: #8874B5;
+    --purple-light: #F0ECF8;
+
+    --blue: #9CC9D9;
+    --blue-dark: #639EAF;
+    --blue-light: #EAF5F8;
+
+    --shadow:
+        0 15px 40px rgba(100, 80, 80, 0.10);
+}
+
+
+/* =========================================
+   SURPRISE SCREEN
+========================================= */
+
+.surprise-screen {
+
+    min-height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: relative;
+
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            circle at 10% 15%,
+            rgba(232, 160, 191, 0.20),
+            transparent 25%
+        ),
+        radial-gradient(
+            circle at 90% 20%,
+            rgba(143, 185, 168, 0.20),
+            transparent 25%
+        ),
+        radial-gradient(
+            circle at 50% 100%,
+            rgba(242, 200, 121, 0.18),
+            transparent 30%
+        ),
+        #FFF8F3;
+
+    padding: 30px;
+}
+
+
+/* =========================================
+   CODE BACKGROUND
+========================================= */
+
+.code-background {
+
+    position: absolute;
+
+    inset: 0;
+
+    overflow: hidden;
+
+    pointer-events: none;
+}
+
+
+.code-item {
+
+    position: absolute;
+
+    font-family: "JetBrains Mono", monospace;
+
+    font-size: clamp(13px, 1.6vw, 22px);
+
+    font-weight: 700;
+
+    opacity: 0.28;
+
+    user-select: none;
+
+    animation: floatCode 8s ease-in-out infinite;
+}
+
+
+/* Colors */
+
+.code-item.pink {
+    color: #D982A6;
+}
+
+.code-item.green {
+    color: #6FA58E;
+}
+
+.code-item.yellow {
+    color: #D3A94F;
+}
+
+
+/* Positions */
+
+.item-1 {
+    top: 8%;
+    left: 8%;
+}
+
+.item-2 {
+    top: 18%;
+    left: 22%;
+}
+
+.item-3 {
+    top: 8%;
+    right: 10%;
+}
+
+.item-4 {
+    top: 30%;
+    left: 7%;
+}
+
+.item-5 {
+    top: 40%;
+    right: 8%;
+}
+
+.item-6 {
+    top: 55%;
+    left: 4%;
+}
+
+.item-7 {
+    top: 70%;
+    left: 15%;
+}
+
+.item-8 {
+    bottom: 10%;
+    right: 8%;
+}
+
+.item-9 {
+    top: 12%;
+    left: 45%;
+}
+
+.item-10 {
+    top: 65%;
+    right: 20%;
+}
+
+.item-11 {
+    top: 25%;
+    right: 25%;
+}
+
+.item-12 {
+    bottom: 20%;
+    left: 8%;
+}
+
+.item-13 {
+    top: 75%;
+    right: 40%;
+}
+
+.item-14 {
+    top: 48%;
+    left: 18%;
+}
+
+.item-15 {
+    bottom: 8%;
+    left: 35%;
+}
+
+.item-16 {
+    top: 15%;
+    right: 42%;
+}
+
+.item-17 {
+    top: 82%;
+    left: 5%;
+}
+
+.item-18 {
+    top: 35%;
+    left: 42%;
+}
+
+.item-19 {
+    bottom: 30%;
+    right: 10%;
+}
+
+.item-20 {
+    top: 60%;
+    left: 30%;
+}
+
+.item-21 {
+    bottom: 12%;
+    right: 25%;
+}
+
+.item-22 {
+    top: 42%;
+    right: 35%;
+}
+
+.item-23 {
+    bottom: 25%;
+    left: 45%;
+}
+
+.item-24 {
+    top: 10%;
+    right: 30%;
+}
+
+.item-25 {
+    top: 80%;
+    right: 15%;
+}
+
+.item-26 {
+    top: 52%;
+    right: 5%;
+}
+
+.item-27 {
+    bottom: 5%;
+    right: 45%;
+}
+
+.item-28 {
+    top: 28%;
+    left: 30%;
+}
+
+.item-29 {
+    top: 62%;
+    right: 30%;
+}
+
+.item-30 {
+    bottom: 35%;
+    left: 25%;
+}
+
+
+/* Floating Animation */
+
+@keyframes floatCode {
+
+    0%,
+    100% {
+        transform: translateY(0) rotate(0deg);
+    }
+
+    50% {
+        transform: translateY(-18px) rotate(3deg);
+    }
+}
+
+
+/* =========================================
+   SURPRISE CONTENT
+========================================= */
+
+.surprise-content {
+
+    width: min(550px, 100%);
+
+    text-align: center;
+
+    background: rgba(255, 255, 255, 0.92);
+
+    border: 1px solid rgba(237, 227, 222, 0.9);
+
+    border-radius: 30px;
+
+    padding: 55px 35px;
+
+    box-shadow: var(--shadow);
+
+    position: relative;
+
+    z-index: 5;
+
+    backdrop-filter: blur(10px);
+
+    animation: cardAppear 1s ease;
+}
+
+
+@keyframes cardAppear {
+
+    from {
+        opacity: 0;
+        transform: translateY(30px) scale(0.96);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+
+/* Gift */
+
+.gift {
+
+    font-size: 75px;
+
+    margin-bottom: 15px;
+
+    animation: giftBounce 2s ease-in-out infinite;
+}
+
+
+@keyframes giftBounce {
+
+    0%,
+    100% {
+        transform: translateY(0) rotate(0);
+    }
+
+    50% {
+        transform: translateY(-10px) rotate(4deg);
+    }
+}
+
+
+/* Small Title */
+
+.small-title {
+
+    font-family: "JetBrains Mono", monospace;
+
+    font-size: 13px;
+
+    color: var(--green-dark);
+
+    letter-spacing: 2px;
+
+    margin-bottom: 18px;
+}
+
+
+/* Heading */
+
+.surprise-content h1 {
+
+    font-size: clamp(32px, 6vw, 48px);
+
+    color: var(--pink-dark);
+
+    margin-bottom: 15px;
+}
+
+
+/* Text */
+
+.surprise-text {
+
+    font-size: 20px;
+
+    color: var(--text);
+
+    margin-bottom: 10px;
+}
+
+
+.ready-text {
+
+    color: var(--text-light);
+
+    margin-bottom: 30px;
+}
+
+
+/* =========================================
+   SURPRISE BUTTON
+========================================= */
+
+.surprise-btn {
+
+    border: none;
+
+    background: linear-gradient(
+        135deg,
+        var(--pink-dark),
+        var(--pink)
+    );
+
+    color: white;
+
+    padding: 16px 28px;
+
+    border-radius: 14px;
+
+    font-family: "Vazirmatn", sans-serif;
+
+    font-size: 16px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 10px 25px rgba(201, 120, 157, 0.25);
+
+    transition: 0.3s ease;
+}
+
+
+.surprise-btn:hover {
+
+    transform: translateY(-4px);
+
+    box-shadow:
+        0 15px 30px rgba(201, 120, 157, 0.35);
+}
+
+
+.surprise-btn:active {
+
+    transform: translateY(-1px);
+}
+
+
+/* =========================================
+   MESSAGE SECTION
+========================================= */
+
+.message-section {
+
+    min-height: 100vh;
+
+    display: none;
+
+    position: relative;
+
+    overflow: hidden;
+
+    padding: 70px 20px;
+
+    background:
+        radial-gradient(
+            circle at 5% 10%,
+            rgba(143, 185, 168, 0.14),
+            transparent 22%
+        ),
+        radial-gradient(
+            circle at 95% 15%,
+            rgba(232, 160, 191, 0.16),
+            transparent 22%
+        ),
+        radial-gradient(
+            circle at 50% 100%,
+            rgba(242, 200, 121, 0.12),
+            transparent 28%
+        ),
+        #FFF8F3;
+}
+
+
+.message-section.show {
+
+    display: block;
+
+    animation: sectionAppear 1s ease;
+}
+
+
+@keyframes sectionAppear {
+
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+
+/* =========================================
+   MESSAGE CONTAINER
+========================================= */
+
+.message-container {
+
+    width: min(800px, 100%);
+
+    margin: auto;
+
+    text-align: center;
+
+    position: relative;
+
+    z-index: 5;
+}
+
+
+/* =========================================
+   CELEBRATION
+========================================= */
+
+.celebration {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 12px;
+
+    font-family: "JetBrains Mono", monospace;
+
+    font-size: 13px;
+
+    color: var(--pink-dark);
+
+    margin-bottom: 20px;
+
+    letter-spacing: 1px;
+}
+
+
+/* =========================================
+   MAIN TITLE
+========================================= */
+
+.main-title {
+
+    font-size: clamp(30px, 6vw, 52px);
+
+    color: var(--text);
+
+    line-height: 1.5;
+
+    margin-bottom: 35px;
+}
+
+
+.main-title span {
+
+    display: block;
+
+    color: var(--pink-dark);
+
+    margin-top: 5px;
+}
+
+
+/* =========================================
+   MESSAGE CARD
+========================================= */
+
+.message-card {
+
+    background: var(--white);
+
+    border: 1px solid var(--border);
+
+    border-radius: 25px;
+
+    padding: 40px 35px;
+
+    box-shadow: var(--shadow);
+
+    margin-bottom: 25px;
+}
+
+
+.message-icon {
+
+    font-size: 55px;
+
+    margin-bottom: 20px;
+}
+
+
+.message-card p {
+
+    font-size: 17px;
+
+    line-height: 2.2;
+
+    color: var(--text-light);
+
+    margin-bottom: 15px;
+}
+
+
+.final-message {
+
+    margin-top: 25px;
+
+    padding-top: 20px;
+
+    border-top: 1px solid var(--border);
+
+    font-size: 20px;
+
+    font-weight: 700;
+
+    color: var(--pink-dark);
+}
+
+
+/* =========================================
+   AUDIO CARD
+========================================= */
+
+.audio-card {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    background: var(--white);
+
+    border: 1px solid var(--border);
+
+    border-radius: 20px;
+
+    padding: 18px 20px;
+
+    margin-bottom: 25px;
+
+    box-shadow: var(--shadow);
+
+    text-align: right;
+}
+
+
+.music-icon {
+
+    width: 52px;
+
+    height: 52px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 15px;
+
+    background: var(--pink-light);
+
+    font-size: 25px;
+}
+
+
+.audio-info {
+
+    flex: 1;
+}
+
+
+.audio-info h3 {
+
+    font-size: 16px;
+
+    color: var(--text);
+
+    margin-bottom: 4px;
+}
+
+
+.audio-info p {
+
+    font-size: 13px;
+
+    color: var(--text-light);
+}
+
+
+/* Play Button */
+
+.play-btn {
+
+    width: 52px;
+
+    height: 52px;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background: var(--green);
+
+    color: white;
+
+    font-size: 18px;
+
+    cursor: pointer;
+
+    transition: 0.3s ease;
+
+    flex-shrink: 0;
+}
+
+
+.play-btn:hover {
+
+    background: var(--green-dark);
+
+    transform: scale(1.07);
+}
+
+
+/* =========================================
+   CODE CARD
+========================================= */
+
+.code-card {
+
+    background: #2E2B32;
+
+    border-radius: 20px;
+
+    overflow: hidden;
+
+    margin-bottom: 25px;
+
+    box-shadow: var(--shadow);
+
+    direction: ltr;
+
+    text-align: left;
+}
+
+
+/* Code Header */
+
+.code-header {
+
+    height: 45px;
+
+    padding: 0 18px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    background: #3A363F;
+
+    color: #D8D2DA;
+
+    font-family: "JetBrains Mono", monospace;
+
+    font-size: 12px;
+}
+
+
+.dots {
+
+    display: flex;
+
+    gap: 7px;
+}
+
+
+.dots span {
+
+    width: 10px;
+
+    height: 10px;
+
+    border-radius: 50%;
+
+    background: #8E8790;
+}
+
+
+.code-body {
+
+    padding: 25px;
+
+    font-family: "JetBrains Mono", monospace;
+
+    font-size: 13px;
+
+    line-height: 2;
+
+    color: #EDE7EE;
+
+    overflow-x: auto;
+}
+
+
+.code-body p {
+
+    white-space: nowrap;
+}
+
+
+/* Code Colors */
+
+.code-body .purple {
+    color: #C8B7E8;
+}
+
+.code-body .yellow {
+    color: #F0D18A;
+}
+
+.code-body .green {
+    color: #9ED0B9;
+}
+
+.code-body .blue {
+    color: #9CC9D9;
+}
+
+.code-body .pink {
+    color: #E8A0BF;
+}
+
+
+/* =========================================
+   TECHNOLOGY PILLS
+========================================= */
+
+.tech-pills {
+
+    display: flex;
+
+    justify-content: center;
+
+    flex-wrap: wrap;
+
+    gap: 10px;
+
+    margin-bottom: 35px;
+}
+
+
+.tech-pills span {
+
+    padding: 8px 14px;
+
+    border-radius: 50px;
+
+    font-family: "JetBrains Mono", monospace;
+
+    font-size: 12px;
+
+    background: var(--white);
+
+    border: 1px solid var(--border);
+
+    color: var(--green-dark);
+
+    box-shadow: 0 5px 15px rgba(100, 80, 80, 0.05);
+}
+
+
+.tech-pills span:nth-child(1) {
+    color: var(--pink-dark);
+}
+
+.tech-pills span:nth-child(2) {
+    color: var(--green-dark);
+}
+
+.tech-pills span:nth-child(3) {
+    color: var(--yellow-dark);
+}
+
+.tech-pills span:nth-child(4) {
+    color: var(--purple-dark);
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+footer {
+
+    font-family: "JetBrains Mono", monospace;
+
+    font-size: 12px;
+
+    color: var(--text-light);
+
+    padding-bottom: 10px;
+}
+
+
+/* =========================================
+   CONFETTI
+========================================= */
+
+#confetti {
+
+    position: fixed;
+
+    inset: 0;
+
+    pointer-events: none;
+
+    z-index: 100;
+}
+
+
+.confetti {
+
+    position: absolute;
+
+    top: -50px;
+
+    animation-name: fall;
+
+    animation-timing-function: linear;
+
+    animation-fill-mode: forwards;
+
+    font-family: "JetBrains Mono", monospace;
+
+    font-weight: 700;
+
+    pointer-events: none;
+}
+
+
+@keyframes fall {
+
+    0% {
+
+        transform:
+            translateY(-50px)
+            rotate(0deg);
+
+        opacity: 1;
+    }
+
+    100% {
+
+        transform:
+            translateY(110vh)
+            rotate(720deg);
+
+        opacity: 0;
+    }
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+    .surprise-screen {
+
+        padding: 20px;
+    }
+
+
+    .surprise-content {
+
+        padding: 45px 22px;
+
+        border-radius: 24px;
+    }
+
+
+    .gift {
+
+        font-size: 60px;
+    }
+
+
+    .surprise-content h1 {
+
+        font-size: 34px;
+    }
+
+
+    .surprise-text {
+
+        font-size: 17px;
+    }
+
+
+    .surprise-btn {
+
+        width: 100%;
+
+        font-size: 15px;
+
+        padding: 15px 18px;
+    }
+
+
+    .message-section {
+
+        padding: 50px 15px;
+    }
+
+
+    .celebration {
+
+        font-size: 10px;
+
+        gap: 6px;
+    }
+
+
+    .main-title {
+
+        font-size: 30px;
+
+        margin-bottom: 25px;
+    }
+
+
+    .message-card {
+
+        padding: 30px 20px;
+
+        border-radius: 20px;
+    }
+
+
+    .message-card p {
+
+        font-size: 15px;
+
+        line-height: 2;
+    }
+
+
+    .message-icon {
+
+        font-size: 45px;
+    }
+
+
+    .final-message {
+
+        font-size: 17px;
+    }
+
+
+    .audio-card {
+
+        padding: 15px;
+
+        gap: 10px;
+    }
+
+
+    .music-icon {
+
+        width: 45px;
+
+        height: 45px;
+
+        font-size: 21px;
+    }
+
+
+    .audio-info h3 {
+
+        font-size: 14px;
+    }
+
+
+    .audio-info p {
+
+        font-size: 11px;
+    }
+
+
+    .play-btn {
+
+        width: 45px;
+
+        height: 45px;
+
+        font-size: 15px;
+    }
+
+
+    .code-body {
+
+        padding: 18px;
+
+        font-size: 11px;
+    }
+
+
+    .tech-pills span {
+
+        font-size: 10px;
+
+        padding: 7px 11px;
+    }
+
+
+    footer {
+
+        font-size: 10px;
+    }
+
+
+    /* Fewer background items on mobile */
+
+    .code-item {
+
+        font-size: 11px;
+
+        opacity: 0.20;
+    }
+
+
+    .item-9,
+    .item-11,
+    .item-14,
+    .item-18,
+    .item-21,
+    .item-23,
+    .item-25,
+    .item-28 {
+
+        display: none;
+    }
+}
+
+
+/* =========================================
+   SMALL PHONES
+========================================= */
+
+@media (max-width: 380px) {
+
+    .surprise-content {
+
+        padding: 35px 18px;
+    }
+
+
+    .main-title {
+
+        font-size: 27px;
+    }
+
+
+    .message-card {
+
+        padding: 25px 16px;
+    }
+
+
+    .message-card p {
+
+        font-size: 14px;
+    }
+
+
+    .audio-card {
+
+        gap: 7px;
+    }
+}
